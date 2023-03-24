@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.AttendTableController">
+   <children>
+      <TableView fx:id="attendanceTable1" layoutY="47.0" prefHeight="354.0" prefWidth="600.0">
+        <columns>
+          <TableColumn fx:id="nameColumn1" prefWidth="96.0" text="Name" />
+          <TableColumn fx:id="surnameColumn1" prefWidth="88.0" text="Surname" />
+            <TableColumn fx:id="groupColumn1" prefWidth="68.0" text="Group" />
+            <TableColumn fx:id="idColumn1" prefWidth="82.0" text="ID" />
+            <TableColumn fx:id="attendedColumn1" prefWidth="106.0" text="Attended" />
+            <TableColumn fx:id="didntAttendColumn1" prefWidth="119.0" text="Didn't attend" />
+        </columns>
+      </TableView>
+      <Button fx:id="homeButton" layoutX="33.0" layoutY="14.0" mnemonicParsing="false" onAction="#switchScenes" text="Home" />
+      <DatePicker fx:id="filterDatePicker" layoutX="113.0" layoutY="14.0" onAction="#filter" />
+      <Button layoutX="317.0" layoutY="14.0" mnemonicParsing="false" onAction="#saveToPDF" text="Save to pdf" />
+   </children>
+</AnchorPane>

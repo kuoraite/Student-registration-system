@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<SplitPane dividerPositions="0.3745819397993311" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.AttendanceController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <DatePicker fx:id="datePicker" layoutX="24.0" layoutY="28.0" promptText="select date" />
+            <Button layoutX="24.0" layoutY="100.0" mnemonicParsing="false" onAction="#onSubmitButton" text="Submit" />
+            <Button layoutX="24.0" layoutY="163.0" mnemonicParsing="false" onAction="#switchScenes" text="Back" />
+            <ChoiceBox fx:id="attendanceBox" layoutX="24.0" layoutY="64.0" prefWidth="150.0" />
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="376.0">
+         <children>
+            <TableView fx:id="attendanceTable" layoutX="-1.0" layoutY="34.0" prefHeight="366.0" prefWidth="418.0">
+              <columns>
+                <TableColumn fx:id="attendedColumn" maxWidth="-Infinity" minWidth="150.0" prefWidth="112.0" text="Attended" />
+                <TableColumn fx:id="didntAttendColumn" maxWidth="-Infinity" minWidth="150.0" prefWidth="120.0" text="Didn't attend" />
+              </columns>
+            </TableView>
+            <Label fx:id="nameLabel" layoutX="21.0" layoutY="14.0" text="Name " />
+            <Label fx:id="surnameLabel" layoutX="98.0" layoutY="14.0" text="Surname" />
+            <Label fx:id="groupLabel" layoutX="198.0" layoutY="14.0" text="Group" />
+            <Label fx:id="idLabel" layoutX="316.0" layoutY="14.0" text="id" />
+         </children></AnchorPane>
+  </items>
+</SplitPane>
